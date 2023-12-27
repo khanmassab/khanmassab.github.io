@@ -22,10 +22,10 @@
         <div class="row">
           <div class="links">
             <ul class="nav-list">
+                <li onclick="showContent('biography')">Biography</li>
               <li onclick="showContent('projects')">Projects</li>
               <li onclick="showContent('contact')" class="active">Contact</li>
-              <li onclick="showContent('info')">Info</li>
-              <li onclick="showContent('links')">Links</li>
+              <li onclick="showContent('socials')">Socials</li>
             </ul>
           </div>
         </div>
@@ -35,110 +35,31 @@
 
     <div class="content" id="projectsContent">
       <!-- Projects Content -->
-      <div id="projectContainer">
+      <div class="content" id="projectContainer">
         <div class="project-slider">
-          <!-- Projects will be dynamically added here -->
         </div>
-        <!-- <div class="slider-nav">
-          <button id="prevButton">&lt;</button>
-          <button id="nextButton">&gt;</button>
-        </div> -->
       </div>
     </div>
 
-      <div class="content" id="contactContent">
-        <!-- Contact Content -->
+    <div class="content" id="contactContent">
+    <!-- Contact Content -->
+    <div class="container">
+        <h2>Contact Information</h2>
+        <p>Email: <a href="mailto:massab725@gmail.com">massab725@gmail.com</a></p>
+        <!-- Add more contact info -->
+    </div>
+    </div>
+
+    <div class="content" id="biographyContent">
         <div class="container">
-          <h2>Contact Information</h2>
-          <p>Email: example@example.com</p>
-          <!-- Add more contact info -->
+            <p>Massab (formal. Muhammad Massab Rasheed), born in 1999 is a backend / devops engineer. 
+                Graduated from Ghazi University Dera Ghazi Khan Completed his Master of Computer Science in 2022. 
+                Has gained over 5 years of experience in the industry. Has worked in various projects using different technologies.
+            </p>
         </div>
-      </div>
+    </div>
     </div> 
-    
+    <script src="scripts/main.js"></script>
   </div>
-
-  <script>
-    $(document).ready(function() {
-      $.getJSON('projects.json', function(data) {
-        const projectContainer = $('#projectContainer');
-        const projectSlider = $('<div>').addClass('project-slider');
-        const sliderNav = $('<div>').addClass('slider-nav');
-        const prevButton = $('<button>').attr('id', 'prevButton').text('<');
-        const nextButton = $('<button>').attr('id', 'nextButton').text('>');
-        
-        $.each(data.projects, function(index, project) {
-          const projectDiv = $('<div>').addClass('project');
-          const projectTitle = $('<h2>').text(project.title);
-          const projectDescription = $('<p>').text(project.description);
-          const projectTools = $('<p> <bold>' ).text("Tools and Technologies: " + project.toolsAndTechnologies);
-          const projectLinks = $('<p>');
-    
-          $.each(project.link, function(index, link) {
-            const linkElement = $('<a>').attr('href', link).text(`Link ${index + 1}`);
-            projectLinks.append(linkElement);
-    
-            if (index < project.link.length - 1) {
-              projectLinks.append(', ');
-            }
-          });
-          
-          projectDiv.append(projectTitle, projectDescription, projectTools, projectLinks);
-          projectSlider.append(projectDiv);
-        });
-    
-        projectContainer.append(projectSlider, sliderNav.append(prevButton, nextButton));
-        
-        // Slider navigation
-        const projectSliderElement = $('.project-slider');
-        const prevButtonElement = $('#prevButton');
-        const nextButtonElement = $('#nextButton');
-        const projectWidth = $('.project').outerWidth(true);
-        const scrollAmount = projectWidth + 110;
-        
-        prevButtonElement.on('click', function() {
-          projectSliderElement.animate({ scrollLeft: '-=' + scrollAmount }, 700);
-        });
-        
-        nextButtonElement.on('click', function() {
-          projectSliderElement.animate({ scrollLeft: '+=' + scrollAmount }, 700);
-        });
-      });
-    });
-  </script>
-
-  <script>    
-    function showContent(section) {
-      const sections = ['projects', 'contact', 'info', 'links'];
-      for (let i = 0; i < sections.length; i++) {
-        const content = $(`#${sections[i]}Content`);
-        const navItem = $(`.nav-list li:nth-child(${i + 1})`);
-        if (sections[i] === section) {
-          content.show();
-          navItem.addClass('active');
-          navItem.addClass('showContent');
-        } else {
-          content.hide();
-          navItem.removeClass('active');
-          navItem.removeClass('showContent');
-        }
-      }
-    }
-  </script>
-
-  <script>
-    document.addEventListener('mousemove', function(event) {
-      const binaryParticle = document.createElement('div');
-      binaryParticle.classList.add('binary-particle');
-      binaryParticle.style.left = event.clientX + 'px';
-      binaryParticle.style.top = event.clientY + 'px';
-      document.body.appendChild(binaryParticle);
-
-      setTimeout(function() {
-        binaryParticle.remove();
-      }, 5000);
-    });
-  </script>
-
 </body>
 </html>
