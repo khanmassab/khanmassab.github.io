@@ -8,13 +8,13 @@
         
         $.each(data.projects, function(index, project) {
           const projectDiv = $('<div>').addClass('project');
-          const projectTitle = $('<h2>').text(project.title);
+          const projectTitle = $('<h2> <b>').text(project.title);
           const projectDescription = $('<p>').text(project.description);
           const projectTools = $('<p> <bold>' ).text("Tools and Technologies: " + project.toolsAndTechnologies);
           const projectLinks = $('<p>');
     
           $.each(project.link, function(index, link) {
-            const linkElement = $('<a>').attr('href', link).text(`Link ${index + 1}`);
+            const linkElement = $('<a target="_blank">').attr('href', link).text(`Link ${index + 1}`);
             projectLinks.append(linkElement);
     
             if (index < project.link.length - 1) {
@@ -33,20 +33,20 @@
         const prevButtonElement = $('#prevButton');
         const nextButtonElement = $('#nextButton');
         const projectWidth = $('.project').outerWidth(true);
-        const scrollAmount = projectWidth + 110;
+        const scrollAmount = projectWidth + 540;
         
         prevButtonElement.on('click', function() {
-          projectSliderElement.animate({ scrollLeft: '-=' + scrollAmount }, 700);
+          projectSliderElement.animate({ scrollLeft: '-=' + scrollAmount }, 1000);
         });
         
         nextButtonElement.on('click', function() {
-          projectSliderElement.animate({ scrollLeft: '+=' + scrollAmount }, 700);
+          projectSliderElement.animate({ scrollLeft: '+=' + scrollAmount }, 1000);
         });
       });
     });
 
 function showContent(section) {
-      const sections = ['projects', 'contact', 'info', 'biography'];
+      const sections = ['biography', 'projects', 'contact', 'socials'];
       for (let i = 0; i < sections.length; i++) {
         const content = $(`#${sections[i]}Content`);
         const navItem = $(`.nav-list li:nth-child(${i + 1})`);
@@ -72,3 +72,5 @@ function showContent(section) {
         binaryParticle.remove();
       }, 500);
     });
+
+    

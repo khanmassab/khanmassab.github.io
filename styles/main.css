@@ -1,192 +1,221 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,100&display=swap');
-body {
-font-family: 'IBM Plex Mono', monospace;
-padding: 0;
-background-color: #000;
-color: #fff;
-overflow: hidden;
+.main-container {
+    /* margin: 40px; */
+    border: 1px sold;
+    font-family: 'IBM Plex Mono', monospace;
+    padding: 0;
+    border-radius: 20px;
+    /* border: 1px solid rgb(230, 142, 142); */
+    color: #fff;
+    overflow: hidden;
+    background: linear-gradient(45deg, #06222e, #1a3c4f, #304652);
+    box-shadow: 0 0 10px rgba(234, 84, 84, 0.5);
+    /* background: linear-gradient(45deg, #0f4c75, #3282b8, #6a879b); */
 }
 
 .container {
-width: 90%;
-margin: 0 auto;
-overflow: hidden;
-padding-left: 10%;
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-left: 10%;
 }
 
 .hero {
-padding: 50px 0;
-text-align: left;
-font-weight: 200;
-font-size: smaller;
+    padding: 50px 0;
+    text-align: left;
+    font-weight: 900;
+    font-size: smaller;
+}
+
+.hidden {
+    display: none;
 }
 
 .hero h1 {
-font-size: 3em;
-margin-bottom: 20px;
+    font-size: 3em;
+    margin-bottom: 20px;
 }
 
 .hero p {
-font-size: 1.2em;
-color: #ccc;
+    font-size: 1.2em;
+    color: #ccc;
 }
 
-.links {
-font-size: 20px;
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-/* border: .5px solid; */
-padding-block: 15%;
-margin-right: 20%;
-cursor: zoom-in;
-transition: transform 0.3s;
-width: -moz-available;
-height: -moz-available;
+a{
+    color: #fff;
+    font-weight: 700;
 }
 
-.links li{
-margin-block: 10px;
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.links ul li:hover {
-font-size: 35px;
-text-decoration: underline;
-/* background-color: rgb(183, 183, 183);
-box-shadow: 10px 10px 0px 0px rgba(164, 163, 163, 0.75);
-color: #000; */
-transform: scale(1.2);
+.nav-list li {
+    position: absolute;
+    font-size: 17px;
+    top: 50%;
+    left: 30%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    margin: 0;
+    padding: 0;
+    /* background-color: #ccc; */
+    border-radius: 50%;
+    cursor: pointer;
 }
 
-.links ul li.active {
-font-size: 35px;
-text-decoration: underline;
-/* background-color: rgb(183, 183, 183);
-color: #000;
-transform: scale(1.2);
-box-shadow: 10px 10px 0px 0px rgba(164, 163, 163, 0.75); */
+span{
+    display: block;
+  margin: 10px;
 }
 
-.nav-list{
-text-decoration: none;
-width: 100%;
-text-align: left;
-} 
+.nav-list li:nth-child(1) {
+    transform: translate(-50%, -150px);
+}
 
+.nav-list li:nth-child(2) {
+    transform: translate(100px, -50%);
+}
+
+.nav-list li:nth-child(3) {
+    transform: translate(-50%, 100px);
+}
+
+.nav-list li:nth-child(4) {
+    transform: translate(-150px, -50%);
+}
+li.active{
+    color: rgb(230, 142, 142);
+    font-size: 20px;
+}
+
+li:hover{
+    font-size: 20px;
+}
 
 .project-slider {
-display: flex;
-overflow-x: scroll;
-scroll-behavior: smooth;
-margin-right: 17px;
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    margin-right: 17px;
 }
 
 .project {
-flex: 0 0 100%;
-width: 100%;
-text-align: justify;
-padding-right: 20px;
+    flex: 0 0 100%;
+    width: 100%;
+    text-align: justify;
+    padding-right: 20px;
 }
 
 .slider-nav {
-text-align: center;
-margin-top: 10px;
+    text-align: center;
+    margin-top: 10px;
 }
+
 .slider-nav {
-text-align: center;
-margin-top: 10px;
+    text-align: center;
+    margin-top: 10px;
 }
 
 .slider-nav button {
-border: none;
-cursor: pointer;
-border-radius: 5px;
-font-size: 60px;
-margin: 0 5px;
-width: 40px;
-background: none;
-color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 60px;
+    margin: 0 5px;
+    width: 40px;
+    background: none;
+    color: white;
 }
 
 .slider-nav button:hover {
-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.2);
 }
 
 .slider-nav button:focus {
-outline: none;
+    outline: none;
 }
 
 .project {
-display: flex;
-flex-wrap: wrap-reverse;
-justify-content: center;
-margin-top: 40px;
-flex-direction: column;
-align-content: center;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    margin-top: 40px;
+    flex-direction: column;
+    align-content: center;
 }
 
 .project h2 {
-font-size: 1.5em;
-margin-bottom: 10px;
-color: #fff;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #fff;
 }
 
 .project p {
-color: #ccc;
+    color: #ccc;
+    font-weight: 600;
 }
 
 .footer {
-background-color: #333;
-color: #fff;
-text-align: center;
-padding: 20px 0;
-position: absolute;
-bottom: 0;
-width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 body {
-margin: 0;
-padding: 0;
-background-color: #000;
-color: #fff;
-overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    overflow: hidden;
 }
 
 .binary-particle {
-position: absolute;
-top: 50%;
-left: 50%;
-background-color: #00ff00;
-width: 2px;
-height: 2px;
-border-radius: 50%;
-pointer-events: none;
-transform: translate(-50%, -50%);
-opacity: 0;
-animation: scatterAnimation 2s infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #00ff00;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: scatterAnimation 2s infinite;
 }
 
-.content-master{
-margin-top: 10rem;
-display: flex;
-align-content: center;
-align-items: center;
+.content-master {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 @keyframes scatterAnimation {
-0% {
-transform: translate(-50%, -50%);
-opacity: 1;
-}
-50% {
-transform: translate(calc(-50% + 10px), calc(-50% + 10px));
-opacity: 0.5;
-}
-100% {
-transform: translate(calc(-50% + 20px), calc(-50% + 20px));
-opacity: 0;
-}
+    0% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate(calc(-50% + 10px), calc(-50% + 10px));
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translate(calc(-50% + 20px), calc(-50% + 20px));
+        opacity: 0;
+    }
 }
 
 

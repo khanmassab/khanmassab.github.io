@@ -1,65 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Massab's Portfolio</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <link rel="stylesheet" href="styles/main.css">
-</head>
-<body>
-  <div class="row">
-    <div class="col-8 pe-0">
-      <div class="container">
-        <div class="row">
-          <div class="hero">
-            <h1>massab khan</h1>
-            <p>backend / devops engineer</p>
-          </div>
-        </div>
-    
-        <div class="row">
-          <div class="links">
-            <ul class="nav-list">
-                <li onclick="showContent('biography')">Biography</li>
-              <li onclick="showContent('projects')">Projects</li>
-              <li onclick="showContent('contact')" class="active">Contact</li>
-              <li onclick="showContent('socials')">Socials</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-4 ps-0 pe-0 content-master">
+<html lang="en" style="height: 100%;">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Massab's Portfolio</title>
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+    <body
+        style="height: 100%; background: #fff; padding: 40px;">
+        <div class="main-container h-100">
+            <div class="row h-100">
+                <div class="col-8 pe-0 h-100">
+                    <div class="container">
+                        <div class="row">
+                            <div class="hero">
+                                <h1>massab khan</h1>
+                                <p>backend / devops engineer</p>
+                            </div>
+                        </div>
 
-    <div class="content" id="projectsContent">
-      <!-- Projects Content -->
-      <div class="content" id="projectContainer">
-        <div class="project-slider">
-        </div>
-      </div>
-    </div>
+                        <div class="row">
+                            <div class="links">
+                                <ul class="nav-list">
+                                    <li
+                                        onclick="showContent('biography')"
+                                        class="active"><i
+                                            class="fa fa-history">
+                                            <span>Biography</span></i></li>
+                                    <li
+                                        onclick="showContent('projects')"><i
+                                            class="fa fa-project-diagram">
+                                            <span>Projects</span></i></li>
+                                    <li onclick="showContent('contact')"><i
+                                            class="fa fa-envelope">
+                                            <span>Contact</span></i></li>
+                                    <li
+                                        onclick="showContent('socials')"><i
+                                            class="fa-brands fa-instagram">
+                                            <span>Socials</span></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-    <div class="content" id="contactContent">
-    <!-- Contact Content -->
-    <div class="container">
-        <h2>Contact Information</h2>
-        <p>Email: <a href="mailto:massab725@gmail.com">massab725@gmail.com</a></p>
-        <!-- Add more contact info -->
-    </div>
-    </div>
-
-    <div class="content" id="biographyContent">
-        <div class="container">
-            <p>Massab (formal. Muhammad Massab Rasheed), born in 1999 is a backend / devops engineer. 
-                Graduated from Ghazi University Dera Ghazi Khan Completed his Master of Computer Science in 2022. 
-                Has gained over 5 years of experience in the industry. Has worked in various projects using different technologies.
-            </p>
+                <!-- <div class="row">
+        <div class="navigation">
+            <span style="--i:0; --x:-1; --y:0;">
+                <ion-icon class="camera-outline"></ion-icon>
+            </span>
         </div>
-    </div>
-    </div> 
-    <script src="scripts/main.js"></script>
-  </div>
-</body>
+    </div> -->
+                <!-- <div class="close">
+        <ion-icon name="close-outline"></ion-icon>
+    </div> -->
+                <div class="col-4 ps-0 pe-0 content-master h-100">
+
+                    <div class="content hidden" id="projectsContent">
+                        <!-- Projects Content -->
+                        <div class="content" id="projectContainer">
+                            <div class="project-slider">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content hidden" id="contactContent">
+                        <!-- Contact Content -->
+                        <div class="container">
+                            <h2><b>Contact Information</b></h2><br>
+                            <p>Email: <a
+                                    href="mailto:massab725@gmail.com">massab725@gmail.com</a></p>
+                            <!-- Add more contact info -->
+                        </div>
+                    </div>
+
+                    <div class="content hidden" id="socialsContent">
+                        <!-- Contact Content -->
+                        <div class="container">
+                            <h2><b>Socials</b></h2><br>
+                            <p>LinkedIn: <a
+                                    href="https://www.linkedin.com/in/massab-khan-backendengineer"
+                                    target="_blank">Massab
+                                    Khan</a></p>
+                            <p>Instagram: <a
+                                    href="https://www.instagram.com/_massabk"
+                                    target="_blank">_massabk</a></p>
+                            <p>X: <a
+                                    href="https://twitter.com/notmassab"
+                                    target="_blank">@notmassab</a></p>
+                        </div>
+                    </div>
+
+                    <div class="content" id="biographyContent">
+                        <div class="container">
+                            <h2><b>Biography</b></h2> <br>
+                            <p><b>Massab (formal. Muhammad Massab Rasheed)</b>,
+                                born
+                                in
+                                1999 is a backend / devops engineer.
+                                Graduated from Ghazi University Dera Ghazi Khan
+                                Completed his <b>Master of Computer Science</b>
+                                in
+                                2022.
+                                <br> <br>
+                                He Has gained over 5 years of experience in the
+                                industry using stacks like <b>Laravel,
+                                    NodeJS/Express,
+                                    AWS, etc.. </b> Has worked in various
+                                projects
+                                using
+                                different technologies. <br> <br>
+                                Currently working at <b>DevStudio</b>, Lahore,
+                                Pakistan.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="scripts/main.js"></script>
+    </body>
 </html>
