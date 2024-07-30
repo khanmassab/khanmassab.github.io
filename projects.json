@@ -1,6 +1,12 @@
 {
     "projects": [
         {
+            "title": "Elbow Beach Cycles",
+            "description": "Explore the less-travelled roads and trails of Bermuda with a scooter or bike rental from Elbow Beach Cycles. This family-owned and -operated shop is headquartered next to Elbow Beach on the South Shore. Since there are multiple locations throughout the island, Elbow Beach Cycles will pick up and drop off anywhere on the island. Choose from a well-maintained fleet of gas- and electric scooters, mountain bikes and electric beach cruisers. All rentals come with free riding lessons, helmets, locks and roadside assistance.",
+            "toolsAndTechnologies": "Laravel, Blades, CSS, JQuery, Bootstrap, MySQL",
+            "link": ["https://rent.scootermartrentals.bm/"]
+        },
+        {
         "title": "Live Chef",
         "description": "In a world where food delivery dominates, LiveChef introduces a game-changing twist to your dining experience. Say goodbye to simply receiving meals and hello to becoming the master of your own kitchen! Users having a one-on-one video consultation with a chef who guides them through preparing incredible meals. With LiveChef, you call the shots in your kitchen and craft dishes that delight your taste buds.",
         "toolsAndTechnologies": "Worked solely on the whole project as a Backend Engineer using PHP-Laravel, Blade, Firebase, MySql, OpenTok, Stripe, CSS, AWS(EC2, RDS, S3, Route53), Webhook Services.",
@@ -11,12 +17,6 @@
         "description": "Click Learning Company (CLC) is an optional, online service that gives families access to a personal Educator if they need extra support for their Learner in reading, writing, math, etc. If families opt in, their Learner is matched with a background checked & certified Educator who will meet with the family to understand their needs, interests, and prepare a specialized learning plan towards achieving their learning objectives.",
         "toolsAndTechnologies": "Laravel, NodeJS, Express, Socket IO, VueJS, Bootstrap, Stripe, Telescope, Sanctum and more",
         "link": ["https://clickfront.io-devs.us/"]
-        },
-        {
-        "title": "Elbow Beach Cycles",
-        "description": "Explore the less-travelled roads and trails of Bermuda with a scooter or bike rental from Elbow Beach Cycles. This family-owned and -operated shop is headquartered next to Elbow Beach on the South Shore. Since there are multiple locations throughout the island, Elbow Beach Cycles will pick up and drop off anywhere on the island. Choose from a well-maintained fleet of gas- and electric scooters, mountain bikes and electric beach cruisers. All rentals come with free riding lessons, helmets, locks and roadside assistance.",
-        "toolsAndTechnologies": "Laravel, Blades, CSS, JQuery, Bootstrap, MySQL",
-        "link": ["https://rent.scootermartrentals.bm/"]
         }
     ]
 }
