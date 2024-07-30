@@ -220,6 +220,8 @@ body {
     }
     .container{
         padding-left: 4%;
+    }
+    .main-container{
         border-radius: 0 !important;
     }
     .hero p {
